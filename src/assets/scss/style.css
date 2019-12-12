@@ -1,0 +1,795 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #f7f6f3;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+#base {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+menu {
+  width: 270px;
+  height: 120%;
+  background-color: #000;
+}
+menu .Porojectus {
+  width: 270px;
+  display: flex;
+  flex-direction: row;
+}
+menu .Porojectus::before {
+  content: "";
+  margin-left: 30.4px;
+  margin-top: 32.5px;
+  width: 21.5px;
+  height: 18.9px;
+  background-image: url("../img/svg/Logo@3x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+menu .Porojectus span {
+  margin-left: 13px;
+  margin-top: 30px;
+  width: 87px;
+  height: 24px;
+  font-size: 17px;
+  color: #fff;
+}
+menu .Porojectus .search {
+  margin-left: 82px;
+  margin-top: 33px;
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-image: url("../img/svg/Search@3x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+menu .User {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  background-color: #202020;
+}
+menu .User img {
+  width: 48px;
+  height: 48px;
+  margin-left: 30px;
+  margin-top: 16px;
+  border-radius: 50%;
+}
+menu .User .userName {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+menu .User .userName div {
+  display: flex;
+  flex-direction: column;
+}
+menu .User .userName .user {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 2px;
+  margin-left: 13px;
+  width: 92px;
+}
+menu .User .userName .statusUser {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: #9b9b9b;
+  margin-left: 13px;
+}
+menu .User .userName .touch {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  color: #9b9b9b;
+  margin-left: 49px;
+  margin-top: 8px;
+  width: 16px;
+  height: 4px;
+}
+menu .work {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+menu .work span {
+  font-size: 20px;
+  color: #fff;
+}
+menu .work p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+menu .work .res {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: -10px;
+}
+menu .work .res:hover {
+  background-color: #2e2e2e;
+  border-radius: 2.5px;
+  cursor: pointer;
+}
+menu .work .two {
+  margin-left: 20px;
+}
+menu .menu {
+  margin-left: 30px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+menu .menu li {
+  width: 100%;
+  height: 38.1px;
+}
+menu .menu a {
+  font-size: 14px;
+  color: #fff;
+}
+menu .menu .menu {
+  font-size: 12px;
+  color: #878787;
+}
+menu .menu .Notifications {
+  display: flex;
+  flex-direction: row;
+}
+menu .menu .Notifications div {
+  width: 20px;
+  height: 19px;
+  font-size: 13px;
+  color: #131313;
+  background-color: #ffc200;
+  border-radius: 50%;
+  margin-left: 9.3px;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  height: 173px;
+  background-color: white;
+}
+nav .content {
+  display: flex;
+  flex-direction: row;
+}
+nav .content .svg {
+  margin-left: 30px;
+  margin-top: 30px;
+  background-image: url("../img/Shapes@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffc200;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-size: contain;
+}
+nav .content .title {
+  display: flex;
+  flex-direction: row;
+}
+nav .content .title .website {
+  font-size: 32px;
+  color: #131313;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+nav .content .touch {
+  width: 30px;
+  height: 30px;
+  margin-left: 11px;
+  margin-top: 35px;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .content .touch span {
+  font-size: 16px;
+  color: #9b9b9b;
+}
+nav .content .UserShareChat {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 auto;
+}
+nav .content .UserShareChat .userImg {
+  margin-left: 5px;
+  margin-top: 44px;
+}
+nav .content .UserShareChat .userImg img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+nav .content .UserShareChat .ShareChat {
+  display: flex;
+  flex-direction: row;
+}
+nav .content .UserShareChat .ShareChat .share {
+  width: 67px;
+  height: 30px;
+  font-size: 14px;
+  color: #131313;
+  margin-left: 15px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  background-color: #eaeaea;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+nav .content .UserShareChat .ShareChat .share span {
+  padding: 5px 14px 6px 15px;
+}
+nav .content .UserShareChat .ShareChat .chat {
+  width: 81px;
+  height: 30px;
+  font-size: 14px;
+  color: #ffc200;
+  margin-left: 15px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff8dd;
+  background-image: url("../img/svg/CombinedShape@1x.svg");
+  background-repeat: no-repeat;
+  background-position-x: 15px;
+  background-position-y: 7px;
+  border-radius: 15px;
+}
+nav .content .UserShareChat .ShareChat .chat span {
+  padding-left: 36px;
+}
+nav .mainMenu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-basis: 100%;
+  margin-left: 30px;
+  margin-top: 21px;
+}
+nav .mainMenu a {
+  font-size: 16px;
+  color: #131313;
+  opacity: 0.7;
+  padding-bottom: 12px;
+}
+nav .mainMenu a:hover {
+  opacity: 1;
+  border-bottom: #ffc200 2px solid;
+}
+nav .mainMenu .Kanban {
+  margin-left: 29px;
+}
+nav .mainMenu .margin {
+  margin-left: 24px;
+}
+nav .mainMenu .Calendar {
+  margin-left: 28px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 68%;
+  height: 100%;
+  background-color: #fff;
+  margin: 30px 0 0 20%;
+  border-radius: 8px;
+}
+main #day {
+  margin-left: 30px;
+  margin-top: 35px;
+  font-size: 14px;
+  color: #131313;
+  opacity: 0.5;
+}
+main #postOne {
+  margin-left: 4%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #131313;
+}
+main #postOne::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #cef9c6;
+  border-radius: 50%;
+  background-image: url("../img/svg/Icon@3x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #postOne p {
+  width: 68%;
+  margin-left: 2.5%;
+}
+main #postOne .time {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #131313;
+  margin-left: 46px;
+  position: relative;
+  opacity: 0.7;
+  text-align: start;
+  width: 10px;
+  width: 16%;
+}
+main #postOne img {
+  width: 12px;
+  height: 9px;
+  margin: 16px 14px 15px 14px;
+}
+main #postTwo {
+  margin-left: 4%;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #131313;
+}
+main #postTwo::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #fff8dd;
+  border-radius: 50%;
+  background-image: url("../img/svg/chat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #postTwo p {
+  width: 68%;
+  margin-left: 2.5%;
+}
+main #postTwo .time {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #131313;
+  margin-left: 46px;
+  position: relative;
+  opacity: 0.7;
+  text-align: start;
+  width: 10px;
+  width: 16%;
+}
+main #postTwo img {
+  width: 12px;
+  height: 11.2px;
+  margin: 14px 14px 14.8px 14px;
+}
+main #postThree {
+  margin-left: 4%;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #131313;
+}
+main #postThree::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #e3efff;
+  border-radius: 50%;
+  background-image: url("../img/svg/files.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #postThree p {
+  width: 68%;
+  margin-left: 2.5%;
+}
+main #postThree .time {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #131313;
+  margin-left: 46px;
+  position: relative;
+  opacity: 0.7;
+  text-align: start;
+  width: 10px;
+  width: 16%;
+}
+main #postThree img {
+  width: 12px;
+  height: 13.5px;
+  margin: 13px 14px 13.5px 14px;
+}
+main #comentary {
+  margin-left: 10%;
+  margin-top: 20px;
+}
+main #comentary p {
+  font-size: 15px;
+  color: #131313;
+  padding: 20px 30px 20px 29px;
+  background-color: #f7f6f3;
+  border-radius: 10px;
+  text-align: start;
+  width: 73%;
+}
+main .world {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+main .world img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 971px) {
+  menu {
+    width: 240px;
+    margin-left: -20px;
+  }
+  menu .Porojectus .search {
+    margin-left: 55px;
+  }
+  menu .User .userName .touch {
+    margin-left: 25px;
+    margin-top: 8px;
+  }
+
+  nav {
+    height: 206px;
+  }
+  nav .content {
+    margin-top: -10px;
+    flex-direction: column;
+  }
+  nav .content .svg {
+    width: 35px;
+    height: 35px;
+  }
+  nav .content .UserShareChat {
+    margin: -30px 30px auto;
+  }
+  nav .content .title .website {
+    font-size: 28px;
+  }
+  nav .content .touch {
+    width: 25px;
+    height: 25px;
+  }
+  nav .mainMenu {
+    margin-top: 20px;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 0 0;
+    border-radius: 0;
+  }
+  main .world {
+    margin: 0 0 0 100px;
+  }
+  main .world img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin: 5px;
+  }
+}
+/*
+
+@media (max-width:1000px) {
+    nav{
+        #content{
+            #UserShareChat{
+                @include position(10%, -30px);
+                flex-direction: column;
+                    #ShareChat{
+                        flex-direction: row;
+                            #share{
+                                @include position(-20px, 10px);
+                            }
+                            #chat{
+                                @include position(10px, 10px);
+                            }
+                    }
+            }
+        }
+        #mainMenu{
+            margin-top: 17px;
+        }
+    }
+}
+
+
+
+
+@media (max-width:868px) {
+    menu{
+        @include position(-20px, -10px);
+        width: 200px;
+            #search{
+                display: none;
+            }
+            #User{
+                #userName{
+                    #touch{
+                        display: none;
+                    }
+                }
+            }
+            #work{
+                flex-direction: column;
+                .two{
+                    padding-left: 0;
+                    padding-top: 15px;
+                }
+            }
+    }
+    nav{
+        #content{
+            #svg{
+                @include size(35px, 35px);
+                margin-left: 20px;
+            }
+            #title{
+                span{
+                    font-size: 28px;
+                    width: 236px;
+                }
+            }
+            #touch{
+                @include size(20px, 20px);
+                font-size: 14px;
+            }
+            #UserShareChat{
+                margin: 0 0 0 auto;
+                    #userImg{
+                        display: none;
+                    }
+                    #ShareChat{
+                        margin-top: -20px;
+                        @include flex(column);
+                            #share{
+                                @include position(10px, 45px);
+                            }
+                            #chat{
+                                margin-top: 10px;
+                            }
+                    }
+            }
+        }
+        #mainMenu{
+            margin-top: 6px;
+            padding-bottom: 30px;
+        } 
+    }
+
+    main{
+        @include size(100%, 100%);
+        margin-top: 30px;
+        margin-left: 0px;
+        border-radius: none;
+    }
+}
+
+    @media (max-width:800px) {
+        main{
+            #world{
+                flex-direction: column;
+                .img0{
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+
+@media (max-width:600px) {
+        menu{
+            width: 140px;
+            #Porojectus{
+                flex-direction: row;
+                    #logo{
+                        @include size(18px, 18px);
+                        @include position(30.4px, 32.5px);
+                    }
+                    span{
+                        @include position(8px, 32px);
+                        font-size: 14px;
+                        width: 230px;
+                    }
+                    #search{
+                        display: none;
+                    }
+            }
+
+            #menu{
+                @include position(30px, 32px);
+                flex-direction: column;
+                    li{
+                        @include size(100%, 38.1px);
+                    }
+                    a{
+                        font-size: 12px;
+                    }   
+                    #MENU{
+                        font-size: 10px;
+                    }
+                    #Notifications{
+                        flex-direction: row;
+                            div{
+                                @include size(20px, 19px);
+                                @include font(13px, #131313);
+                                background-color: #ffc200;
+                                border-radius: 50%;
+                                margin-left: 9.3px;
+                                text-align: center;
+                            }
+                    }
+            }
+            #User{
+                @include size(100%, 70px);
+                margin-top: 30px;
+                flex-direction: row;
+
+                img{
+                    @include size(38px, 38px);
+                    @include position(30px, 16px);
+                }
+
+                #userName{
+                    flex-direction: row;
+                    margin-top: 20px;
+                        div{
+                            flex-direction: column;
+                        }
+                        #user{
+                            font-size: 13px;
+                            width: 50px;
+                        }
+                        #statusUser{
+                            display: none;
+                        }
+                }
+            }
+        }
+        nav{
+            #content{
+                #svg{
+                    @include size(30px, 30px);
+                    @include position(15px, 20px);
+                }
+                #title{
+                    flex-direction: row;
+                    span{
+                            @include position(15px, 20px);
+                            font-size: 16px;
+                            width: 136px;
+                        }
+                }
+                #touch{
+                        @include size(15px, 15px);
+                        @include position(2px, 22.5px);
+                        font-size: 10px;
+                        padding-top: 4px;
+                }
+            #UserShareChat{
+                flex-direction: row;
+                position: absolute;
+                #ShareChat{
+
+                    flex-direction: row;
+                    #share{
+                        @include position(80px, 70px);
+                        @include size(57px, 30px);
+                        font-size: 14px;
+                    }
+                    #chat{
+                        @include position(10px, 70px);
+                    }
+                }
+             }
+        }
+            #mainMenu{
+                @include position(10px, 40px);
+                a{
+                    font-size: 14px;
+                    opacity: 0.7;
+                    padding-bottom: 1px;
+                }
+                .Kanban{
+                    margin-left: 20px;
+                }
+                .margin{
+                    margin-left: 19px;
+                }
+                .Calendar{
+                    margin-left: 20px;
+                }
+
+            }
+        }
+        main{
+            flex-direction: column;
+            @include size(100%, 100%);
+            margin: 0 0 0 0;
+            #day{
+                font-size: 14px;
+            }
+
+            #postOne{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+            #postTwo{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+            #postThree{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+
+            #comentary{
+                @include size(80%, 11%);
+                p{
+                    font-size: 13px;
+                }
+            }
+        }        
+    }
+    */
+
+/*# sourceMappingURL=style.css.map */

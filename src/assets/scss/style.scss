@@ -1,0 +1,980 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+@mixin size ($width,$height){
+    width: $width;
+    height: $height;    
+}
+@mixin position ($left,$top){
+    margin-left: $left;
+    margin-top: $top;
+}
+@mixin flex ($flex){
+    display: flex;
+    flex-direction: $flex;
+}
+@mixin font ($size,$color) {
+    font-size: $size;
+    color: $color;
+}
+@mixin Img ($img){
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+@mixin time {
+    @include flex(row);
+    @include font(14px, #131313);
+    margin-left: 46px;
+    position: relative;
+    opacity: 0.7;
+    text-align: start;
+    width: 10px;
+}
+@mixin status($color, $width, $svg) {
+    @include flex(row);
+    @include font(16px, #131313);
+    &::before{
+        content: "";
+        @include size(40px, 40px);
+        background-color: $color;
+        border-radius: 50%;
+        @include Img($svg);   
+    }
+    p{
+        width: $width;
+        margin-left: 2.5%;
+    }
+    .time{
+        @include time;
+        width: 16%;
+    }
+}
+
+body{
+    background-color: #F7F6F3;
+    font-family: Helvetica;
+    @include flex(row);
+}
+#base{
+    @include flex(column);
+    flex-basis: 100%;
+}
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+menu{
+    width: 270px;
+    height: 120%;
+    background-color: #000;
+    .Porojectus{
+        width: 270px;
+        @include flex(row);
+         
+            &::before{
+                content: "";
+                @include position(30.4px, 32.5px);
+                @include size(21.5px, 18.9px);
+                @include Img("../img/svg/Logo@3x.svg");
+            } 
+            span{
+                @include position(13px, 30px);
+                @include size(87px, 24px);
+                @include font(17px, #fff);
+            }
+        .search{
+            @include position(82px, 33px);
+            @include size(16px, 16px);
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            @include Img("../img/svg/Search@3x.svg");
+        }
+    }
+
+    .User{
+        @include size(100%, 80px);
+        @include flex(row);
+        margin-top: 30px;
+        background-color: #202020;
+
+        img{
+            @include size(48px, 48px);
+            @include position(30px, 16px);
+            border-radius: 50%;
+        }
+
+        .userName{
+            @include flex(row);
+            margin-top: 20px;
+                div{
+                    @include flex(column);
+                }
+
+                .user{
+                    @include font (14px, #fff);
+                    margin-bottom: 2px;
+                    margin-left: 13px;
+                    width: 98px;
+                }
+                .statusUser{
+                    @include flex(row);
+                    @include font (12px, #9b9b9b);
+                    margin-left: 13px;
+                }
+                .touch{
+                    @include flex(row);
+                    @include font(17px, #9b9b9b);
+                    @include position(49px, 8px);
+                    @include size(16px, 4px);
+                }
+        }
+    }
+
+
+    .work{
+        @include flex(row);
+        @include position(30px, 20px);
+
+            span{
+                @include font(20px, #fff);
+            }
+            p{
+                @include font(12px, rgba(255, 255, 255, 0.5));
+            }
+            .res{
+                @include flex(column);
+                padding: 10px;
+                margin: -10px;
+                &:hover{
+                    background-color: #2e2e2e;
+                    border-radius: 2.5px;
+                    cursor: pointer
+                }
+
+            }
+            .two{
+                margin-left: 20px;
+            }
+    }
+
+    .menu{
+        @include position(30px, 32px);
+        @include flex(column);
+            li{
+                @include size(100%, 38.1px);
+            }
+            a{
+                @include font(14px, #fff);  
+            }   
+            .menu{
+                @include font(12px, #878787);
+            }
+            .Notifications{
+                @include flex(row);
+                    div{
+                        @include size(20px, 19px);
+                        @include font(13px, #131313);
+                        background-color: #ffc200;
+                        border-radius: 50%;
+                        margin-left: 9.3px;
+                        text-align: center;
+                    }
+            }
+    }
+}
+
+
+
+
+nav{
+    @include size(100%, 176px);
+    background-color: white;
+
+    .content{
+            display: flex;
+            flex-direction: row;
+        .svg{
+            @include position(30px, 30px);
+            @include Img("../img/Shapes@2x.png");
+            background-color: #FFC200;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-size: contain;
+        }
+        .title{
+            @include flex (row);
+            .website{
+                    @include font(32px, #131313);
+                    @include position(15px, 30px);
+                }
+        }
+        .touch{
+                @include size(30px, 30px);
+                @include position(11px, 35px);
+                background-color: #eaeaea;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    span{
+                        @include font(16px, #9b9b9b);
+                    }
+        }
+        .UserShareChat{
+            @include flex(row);
+            margin: 0 0 0 auto;
+
+            .userImg{
+                    @include position(5px, 44px);
+                    img{ 
+                        @include size(30px, 30px);
+                        border-radius: 50%;
+                        margin-left: 5px;
+                    }
+            }
+            .ShareChat{
+                @include flex(row);
+                .share{
+                    @include size(67px, 30px);
+                    @include font(14px, #131313);
+                    @include position(15px, 45px);
+                    @include flex(row);
+                    background-color: #eaeaea;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 15px;
+                        span{
+                            padding: 5px 14px 6px 15px;
+                        }
+                }
+                .chat{
+                    @include size(81px, 30px);
+                    @include font(14px, #ffc200);
+                    @include position(15px, 45px);
+                    @include flex(row);
+                    margin-right: 20px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: #fff8dd;
+                    background-image: url("../img/svg/CombinedShape@1x.svg");
+                    background-repeat: no-repeat;
+                    background-position-x: 15px;
+                    background-position-y: 7px;
+                    border-radius: 15px;
+                        span{
+                            padding-left: 36px;
+                        }
+
+                }
+            }
+        }
+        
+    }
+    
+    .mainMenu{
+        @include flex(row);
+        list-style: none;
+        flex-basis: 100%;
+
+        @include position(30px, 21px);
+        a{
+            @include font(16px, #131313);
+            opacity: 0.7;
+            padding-bottom: 12px;
+                &:hover{
+                    opacity: 1;
+                    border-bottom: #FFC200 2px solid;
+                }
+        }
+        .Kanban{
+            margin-left: 29px;
+        }
+        .margin{
+            margin-left: 24px;
+        }
+        .Calendar{
+            margin-left: 28px;
+        }
+    }
+
+}
+
+
+
+
+main{
+    @include flex(column);
+    @include size(68%, 100%);
+
+    background-color: #FFF;
+    margin: 30px 0 0 20%;
+    border-radius: 8px;
+
+
+    #day{
+        @include position(30px, 35px);
+        @include font(14px, #131313);
+        opacity: 0.5;
+    }
+
+    #postOne{
+        @include position(4%, 32px);
+        @include status(#CEF9C6, 68%, "../img/svg/Icon@3x.svg");
+            img{
+                @include size(12px, 9px);
+                margin: 16px 14px 15px 14px;
+            }
+    }
+    #postTwo{
+        @include position(4%, 26px);
+        @include status(#FFF8DD, 68%, "../img/svg/chat.svg");
+            img{
+                @include size(12px, 11.2px);
+                margin: 14px 14px 14.8px 14px;
+            }
+    }
+    #postThree{
+        @include position(4%, 26px);
+        @include status(#E3EFFF, 68%, "../img/svg/files.svg");
+            img{
+                @include size(12px, 13.5px);
+                margin: 13px 14px 13.5px 14px;
+            }
+    }
+    
+        
+    #comentary{
+        @include position(10%, 20px);
+            p{
+                @include font(15px, #131313);
+                padding: 20px 30px 20px 29px;
+                background-color: #F7F6F3;
+                border-radius: 10px;
+                text-align: start;
+                width: 73%;
+            }
+    }
+    .world{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        margin: 0 auto;
+            img{
+                @include size(100px, 100px);
+                border-radius: 8px;
+                margin: 5px;
+                cursor: pointer;
+            }
+    }
+
+}
+
+@media(max-width: 990px){
+    menu{
+        width: 240px;
+        margin-left: -20px;
+        .Porojectus{
+            .search{
+                margin-left: 55px;
+            }
+    }
+    .User{
+        .userName{
+                .touch{
+                    @include position(25px, 8px);
+
+                }
+        }
+    }
+        
+    }
+    nav{
+        height: 206px;
+
+        .content{
+            margin-top: -10px;
+            flex-direction: column;
+            .svg{
+                width: 35px;
+                height: 35px;
+            }
+            .UserShareChat{
+                margin: -30px  30px auto;
+                //display: block;
+            }
+            .title{
+                .website{
+                        font-size: 28px;
+                    }
+            }
+            .touch{
+                @include size(25px, 25px);
+            }
+        }
+        .mainMenu{
+            margin-top: 20px;
+        }
+        
+    }
+    main{
+        @include size(100%, 100%);
+        margin: 30px 0 0 0;
+        border-radius: 0;
+
+        .world{
+            margin: 0 0 0 100px;
+                img{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 8px;
+                    margin: 5px;
+                }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+@media (max-width:1000px) {
+    nav{
+        #content{
+            #UserShareChat{
+                @include position(10%, -30px);
+                flex-direction: column;
+                    #ShareChat{
+                        flex-direction: row;
+                            #share{
+                                @include position(-20px, 10px);
+                            }
+                            #chat{
+                                @include position(10px, 10px);
+                            }
+                    }
+            }
+        }
+        #mainMenu{
+            margin-top: 17px;
+        }
+    }
+}
+
+
+
+
+@media (max-width:868px) {
+    menu{
+        @include position(-20px, -10px);
+        width: 200px;
+            #search{
+                display: none;
+            }
+            #User{
+                #userName{
+                    #touch{
+                        display: none;
+                    }
+                }
+            }
+            #work{
+                flex-direction: column;
+                .two{
+                    padding-left: 0;
+                    padding-top: 15px;
+                }
+            }
+    }
+    nav{
+        #content{
+            #svg{
+                @include size(35px, 35px);
+                margin-left: 20px;
+            }
+            #title{
+                span{
+                    font-size: 28px;
+                    width: 236px;
+                }
+            }
+            #touch{
+                @include size(20px, 20px);
+                font-size: 14px;
+            }
+            #UserShareChat{
+                margin: 0 0 0 auto;
+                    #userImg{
+                        display: none;
+                    }
+                    #ShareChat{
+                        margin-top: -20px;
+                        @include flex(column);
+                            #share{
+                                @include position(10px, 45px);
+                            }
+                            #chat{
+                                margin-top: 10px;
+                            }
+                    }
+            }
+        }
+        #mainMenu{
+            margin-top: 6px;
+            padding-bottom: 30px;
+        } 
+    }
+
+    main{
+        @include size(100%, 100%);
+        margin-top: 30px;
+        margin-left: 0px;
+        border-radius: none;
+    }
+}
+
+    @media (max-width:800px) {
+        main{
+            #world{
+                flex-direction: column;
+                .img0{
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+
+@media (max-width:600px) {
+        menu{
+            width: 140px;
+            #Porojectus{
+                flex-direction: row;
+                    #logo{
+                        @include size(18px, 18px);
+                        @include position(30.4px, 32.5px);
+                    }
+                    span{
+                        @include position(8px, 32px);
+                        font-size: 14px;
+                        width: 230px;
+                    }
+                    #search{
+                        display: none;
+                    }
+            }
+            
+            #menu{
+                @include position(30px, 32px);
+                flex-direction: column;
+                    li{
+                        @include size(100%, 38.1px);
+                    }
+                    a{
+                        font-size: 12px;
+                    }   
+                    #MENU{
+                        font-size: 10px;
+                    }
+                    #Notifications{
+                        flex-direction: row;
+                            div{
+                                @include size(20px, 19px);
+                                @include font(13px, #131313);
+                                background-color: #ffc200;
+                                border-radius: 50%;
+                                margin-left: 9.3px;
+                                text-align: center;
+                            }
+                    }
+            }
+            #User{
+                @include size(100%, 70px);
+                margin-top: 30px;
+                flex-direction: row;
+        
+                img{
+                    @include size(38px, 38px);
+                    @include position(30px, 16px);
+                }
+        
+                #userName{
+                    flex-direction: row;
+                    margin-top: 20px;
+                        div{
+                            flex-direction: column;
+                        }
+                        #user{
+                            font-size: 13px;
+                            width: 50px;
+                        }
+                        #statusUser{
+                            display: none;
+                        }
+                }
+            }
+        }
+        nav{
+            #content{
+                #svg{
+                    @include size(30px, 30px);
+                    @include position(15px, 20px);
+                }
+                #title{
+                    flex-direction: row;
+                    span{
+                            @include position(15px, 20px);
+                            font-size: 16px;
+                            width: 136px;
+                        }
+                }
+                #touch{
+                        @include size(15px, 15px);
+                        @include position(2px, 22.5px);
+                        font-size: 10px;
+                        padding-top: 4px;
+                }
+            #UserShareChat{
+                flex-direction: row;
+                position: absolute;
+                #ShareChat{
+                    
+                    flex-direction: row;
+                    #share{
+                        @include position(80px, 70px);
+                        @include size(57px, 30px);
+                        font-size: 14px;
+                    }
+                    #chat{
+                        @include position(10px, 70px);
+                    }
+                }
+             }
+        }
+            #mainMenu{
+                @include position(10px, 40px);
+                a{
+                    font-size: 14px;
+                    opacity: 0.7;
+                    padding-bottom: 1px;
+                }
+                .Kanban{
+                    margin-left: 20px;
+                }
+                .margin{
+                    margin-left: 19px;
+                }
+                .Calendar{
+                    margin-left: 20px;
+                }
+                
+            }
+        }
+        main{
+            flex-direction: column;
+            @include size(100%, 100%);
+            margin: 0 0 0 0;
+            #day{
+                font-size: 14px;
+            }
+    
+            #postOne{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+            #postTwo{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+            #postThree{
+                p{
+                    width: 50%;
+                }
+                font-size: 14px;
+            }
+                
+            #comentary{
+                @include size(80%, 11%);
+                p{
+                    font-size: 13px;
+                }
+            }
+        }        
+    }
+    */
