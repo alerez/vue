@@ -205,7 +205,7 @@ menu{
 
 
 nav{
-    @include size(100%, 176px);
+    @include size(100%, 262px);
     background-color: white;
 
     .content{
@@ -325,7 +325,7 @@ nav{
 
 main{
     @include flex(column);
-    @include size(68%, 100%);
+    @include size(68%, 150%);
 
     background-color: #FFF;
     margin: 30px 0 0 20%;

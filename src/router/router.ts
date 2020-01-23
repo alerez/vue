@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Tasks from '../Layout/components/navigation/Tasks.vue';
-import Activity from '../Layout/components/navigation/Activity.vue';
-import Error from '../Layout/components/navigation/Error.vue';
+import Tasks from '@/Layout/components/navigation/Tasks.vue';
+import Activity from '@/Layout/components/navigation/Activity.vue';
+import Error from '@/Layout/components/navigation/Error.vue';
 
 Vue.use(VueRouter);
 

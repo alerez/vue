@@ -1,15 +1,28 @@
 <template lang="pug">
-  Content
+  main
+    #day {{postOne.tasksDay}}
+    #postOne
+      .status
+      p {{postOne.Text}}
+      .time {{postOne.Time}}
+    #postTwo
+      .status
+      p {{postTwo.Text}}
+      .time {{postTwo.Time}}
+    #comentary
+      p {{postOne.comentary}}
+    #postThree
+      .status
+      p {{postThree.Text}}
+      .time {{postThree.Time}}
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Content from './Content.vue';
-import { content } from '@/Layout/Interfaces/ContentInterfaces';
+import { content } from '@/Interfaces/ContentInterfaces';
 
-    @Component({
-      components: { Content },
-    })
+@Component({})
+
 export default class Tasks extends Vue {
         postOne: content = {
           tasksDay: 'TODAY',

@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { interfaces } from '@/Layout/Interfaces/HeaderInterfaces';
+import { interfaces } from '@/Interfaces/HeaderInterfaces';
 
 @Component
 export default class Header extends Vue {

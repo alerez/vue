@@ -3,4 +3,5 @@ export interface content {
   Text?: string;
   Time?: string;
   comentary?: string;
+  images?: any[],
 }

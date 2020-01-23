@@ -15,7 +15,7 @@
       .status
       p {{postThree.Text}}
       .time {{postThree.Time}}
-    images
+
 </template>
 
 <script lang="ts">
@@ -29,6 +29,13 @@ import images from './images.vue';
 export default class Content extends Vue {
 
 }
+
+const img1 = require('../../../assets/img/1.jpg');
+const img2 = require('../../../assets/img/2.jpg');
+const img3 = require('../../../assets/img/3.jpg');
+const img4 = require('../../../assets/img/4.jpg');
+
+const photos = [img1, img2, img3, img4];
 
 
 </script>

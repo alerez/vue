@@ -432,7 +432,6 @@ main #postThree .time {
   position: relative;
   opacity: 0.7;
   text-align: start;
-  width: 10px;
   width: 16%;
 }
 main #postThree img {

@@ -33,14 +33,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { menuBar, user, work } from '@/Layout/Interfaces/SideBarInterfaces';
+import { menuBar, user, work } from '@/Interfaces/SideBarInterfaces';
 
 @Component
 export default class SideBar extends Vue {
     user: user = {
       name: 'Jean Gonzales',
       status: 'Product Owner',
-    }
+    };
 
     work: work = {
 
@@ -49,7 +49,7 @@ export default class SideBar extends Vue {
 
       Completed: 'Completed Tasks',
       Open: 'Open Tasks',
-    }
+    };
 
     menuBar: menuBar = {
 
